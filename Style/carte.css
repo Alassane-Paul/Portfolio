@@ -1,0 +1,128 @@
+.container {
+    perspective: 3000px;
+}
+
+.carte {
+    width: 360px;
+    height: 530px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border: 1px solid var(--accent);
+    box-shadow: 5px 5px 10px rgba(15, 23, 42, 0.16),
+    -5px -5px 10px rgba(15, 23, 42, 0.05);
+    border-radius: 15px;
+    /* -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    transition: -webkit-transform 5s ease-in-out,
+    transform 5s ease-in-out; */
+    transition: 1s ease-in-out;
+}
+
+.carte:hover {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: -webkit-transform 3s ease-in-out,
+    transform 1s ease-in-out;
+}
+
+.carte.turn {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: -webkit-transform 1s ease-in-out,
+    transform 1s ease-in-out;
+}
+
+
+.front-page, .back-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    
+}
+
+.front-page {
+    background: url(../images/Pp.png) no-repeat center center/cover;
+}
+
+.front-info {
+    position: absolute;
+    bottom: 10px;
+    left: 15%;
+    color: var(--accent);
+    text-shadow: 2px 2px 5px rgba(15, 23, 42, 0.35);
+    text-align: center;
+}
+
+.mon-nom {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.mon-titre {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: var(--accent);
+}
+
+.back-page {
+    background: var(--secondary);
+    color: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+
+}
+
+.back-info {
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.back-info>h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mon-boulot {
+    font-size: 1rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-btn {
+    background: var(--accent);
+    color: var(--white);
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.card-btn:hover {
+    background: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--accent);
+}
+
+.bottom-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* .turn-btn {
+    background: var(--primary);
+    color: var(--accent);
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-radius:  25px;
+} */
